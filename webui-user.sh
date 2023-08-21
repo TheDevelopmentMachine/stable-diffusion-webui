@@ -9,8 +9,11 @@
 # Name of the subdirectory
 #clone_dir="stable-diffusion-webui"
 
+export PYTORCH_CUDA_ALLOC_CONF=garbage_collection_threshold:0.9,max_split_size_mb:512
+
 # Commandline arguments for webui.py, for example: export COMMANDLINE_ARGS="--medvram --opt-split-attention"
 #export COMMANDLINE_ARGS=""
+export COMMANDLINE_ARGS=" --cors-allow-origins=* --port=2053 --listen --no-half-vae --api --enable-insecure-extension-access"
 
 # python3 executable
 #python_cmd="python3"
